@@ -22,16 +22,16 @@ const images = [
   {
     url: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
     alt: "Lighthouse Coast Sea",
-  }
+  },
 ];
 
-// Отримуємо ul.gallery
-const gallery = document.querySelector('.gallery');
+const gallery = document.querySelector(".gallery");
 
-// Створюємо HTML для елементів галереї
-const galleryItemsHTML = images.map(({ url, alt }) => 
-  `<li class="gallery-item"><img src="${url}" alt="${alt}" class="gallery-image"></li>`
-).join('');
+const galleryItemsHTML = images
+  .map(
+    ({ url, alt }) =>
+      `<li class="gallery-item"><img src="${url}" alt="${alt}" class="gallery-image"></li>`
+  )
+  .join("");
 
-// Додаємо HTML в DOM за одну операцію
-gallery.insertAdjacentHTML('beforeend', galleryItemsHTML);
+gallery.insertAdjacentHTML("beforeend", galleryItemsHTML);

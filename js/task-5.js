@@ -4,19 +4,14 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-// Отримуємо посилання на елементи
-const changeColorButton = document.querySelector('.change-color');
-const colorSpan = document.querySelector('.color');
+const changeColorButton = document.querySelector(".change-color");
+const colorSpan = document.querySelector(".color");
 const body = document.body;
 
-// Додаємо обробник події click на кнопку
-changeColorButton.addEventListener('click', () => {
-  // Генеруємо випадковий колір
+changeColorButton.addEventListener("click", () => {
   const randomColor = getRandomHexColor();
 
-  // Змінюємо колір фону body
   body.style.backgroundColor = randomColor;
 
-  // Відображаємо значення кольору в span
   colorSpan.textContent = randomColor;
 });
